@@ -6,6 +6,8 @@ import org.springframework.data.repository.query.Param;
 
 import com.priyanshu.ems_ai.entity.Organization;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface OrganizationRepository
@@ -13,4 +15,8 @@ public interface OrganizationRepository
 
     @Query(value = "SELECT ems.sp_create_organization(:name)", nativeQuery = true)
     UUID createOrganization(@Param("name") String name);
+
+    List<Organization> findAll();
+
+    Optional<Organization> findById(UUID id);
 }

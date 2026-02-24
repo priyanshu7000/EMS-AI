@@ -1,0 +1,15 @@
+package com.priyanshu.ems_ai.dto;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import java.util.UUID;
+
+@Data
+@AllArgsConstructor
+public class UserResponse {
+
+    private UUID id;
+    private String name;
+    private String email;
+    private Boolean isActive;
+    private String roleName;
+}
